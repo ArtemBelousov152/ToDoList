@@ -1,0 +1,16 @@
+.btn {
+    background-color: $main_color;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+    color: #fff;
+    transition: all .5s;
+    &:nth-child(3) {
+        margin-right: 0;
+    }
+    &:hover {
+        color: black;
+    }
+}

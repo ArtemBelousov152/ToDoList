@@ -1,0 +1,107 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+@import 'base/_variables.scss';
+@import 'blocks/btn';
+
+
+* {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    margin: 0;
+}
+body {
+	background: 
+		linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0.0) 80%),
+		linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 75%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todolist {
+    position: relative;
+    width: 400px;
+    min-height: 600px;
+    box-shadow: 3px 3px 6px, -3px -3px 6px;
+    background-color: #fff;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        font-size: 20px;
+        padding: 5px 20px 15px 20px;
+        color: white;
+        background-color: $main_color;
+        span {
+            font-size: 40px;
+            cursor: pointer;
+            padding-top: 10px;
+        }
+    }
+    &__add {
+        width: 100%;
+        border: 3px #808080 solid;
+        padding: 3px 20px;
+    }
+    &__list {
+        max-height: 405px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        overflow-y: scroll;
+        span {
+            position: absolute;
+            color: $main_color;
+            cursor: pointer;
+            left: 5px;
+            top: 12px;
+            display: none;
+        }
+        li {
+            padding: 5px 30px 5px 30px;
+            position: relative;
+            /* transition: all 0.7s; */
+            font-size: 20px;
+            line-height: 32px;
+            height: 45px;
+            cursor: default;
+            &:hover {
+                background-color: rgb(233, 230, 230);
+                span {
+                    display: block;
+                }
+            }
+            &:nth-child(2n) {
+                background-color: #EDF1F5;
+            }
+            &:nth-child(2n+1) {
+                background-color: #F7F7F7;
+            }
+        }
+    }
+    &__buttons {
+        position: absolute;
+        bottom: 5px;
+        left: 38px;
+    }
+    &__tips {
+        display: none;
+        position: absolute;
+        width: 350px;
+        left: -100%;
+    }
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.checked {
+    text-decoration: line-through;
+}
