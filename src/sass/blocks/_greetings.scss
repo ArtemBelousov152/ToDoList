@@ -1,0 +1,18 @@
+.greetings {
+    background: 
+		linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0.0) 80%),
+		linear-gradient(-45deg, rgba(120, 155, 255, 1) 25%, rgba(255, 160, 65, 1) 75%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.4s all;
+    &__text {
+        font-size: 200px;
+        color: #008080;
+    }
+}

@@ -12,29 +12,63 @@
 </head>
 <body>
     <div class="container">
-        <div class="todolist">
-            <div class="todolist__header">
-                <h1 class="todolist__title">My to-do list</h1>
-                <span data-openAdd class="icon-pencil-solid"></span>
+        <div class="greetings">
+            <div class="greetings__text">
+                Welcome =*
             </div>
-            <input type="text" placeholder="Введите текст" class="todolist__add">
-            <ul class="todolist__list">
-            </ul>
-            <div class="todolist__buttons">
-                <button data-save class="btn">Сохранить</button>
-                <button data-clear class="btn">Очистить</button>
-                <button data-tips class="btn">Справка</button>
-            </div>
-            <ul class="todolist__tips">
-                <li>Чтобы спрятать или показать поле ввода, кликните на карандаш</li>
-                <li>Для добавления списка дел напишите текст в поле ввода и нажмите Enter</li>
-                <li>Чтобы удалить один пункт, наведите на него и нажмите на значок корзины</li>
-                <li>Чтобы удалить все списки дел, нажмите "Очистить"</li>
-                <li>Нажмите "Сохранить", чтобы сохранить список дел на потом</li>
-            </ul>
         </div>
-    </div>
+        <section class="watch">
+            <div class="watch__wrapper">
+                <div class="watch__item">
+                    <span id="hour" class="watch__item_clock"></span>
+                    <span class="watch__item_dots">:</span>
+                </div>
+                <div class="watch__item">
+                    <span id="minute" class="watch__item_clock"></span>
+                    <span class="watch__item_dots">:</span>
+                </div>
+                <div class="watch__item">
+                    <span id="second" class="watch__item_clock"></span>
+                </div>
+            </div>
+            <div class="date">
+                <div class="date__item">
+                    <span id="day">01</span>
+                </div>
+                <div class="date__item">
+                    <span id="month">02</span>
+                </div>
+                <div class="date__item">
+                    <span id="year">1995</span>
+                </div>
+            </div>
+        </section>
     
+        <section class="list">
+                <div class="todolist">
+                    <div class="todolist__header">
+                        <h1 class="todolist__title">My to-do list</h1>
+                        <span data-openAdd class="icon-pencil-solid"></span>
+                    </div>
+                    <input type="text" placeholder="Введите текст" class="todolist__add">
+                    <ul class="todolist__list">
+                    </ul>
+                    <div class="todolist__buttons">
+                        <button data-save class="btn">Сохранить</button>
+                        <button data-clear class="btn">Очистить</button>
+                        <button data-tips class="btn">Справка</button>
+                    </div>
+                    <ul class="todolist__tips">
+                        <li>Чтобы спрятать или показать поле ввода, кликните на карандаш</li>
+                        <li>Для добавления списка дел напишите текст в поле ввода и нажмите Enter</li>
+                        <li>Чтобы удалить один пункт, наведите на него и нажмите на значок корзины</li>
+                        <li>Чтобы удалить все списки дел, нажмите "Очистить"</li>
+                        <li>Нажмите "Сохранить", чтобы сохранить список дел на потом</li>
+                    </ul>
+                </div> 
+        </section>
+    </div>
+
     <script src="js/bundle.js"></script>
 </body>
 </html>

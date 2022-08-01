@@ -64,5 +64,5 @@ function toDoList() {
     });
 }
 
-export {toDoList};
+export default toDoList;
 

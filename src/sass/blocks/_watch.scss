@@ -1,0 +1,33 @@
+.watch {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        font-size: 110px;
+        line-height: 100px;
+        color: $main_color;
+        text-shadow: 4px 4px 3px rgb(255, 255, 255),
+                    -2px -2px 5px rgb(255, 255, 255);
+        &_dots {
+            display: inline-block;
+            margin-right: 18px;
+            transform: scale(1.4) translateY(-16px);
+            
+        }
+    }
+
+    .date {
+        color: #0749c4;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        &__item {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 30px;
+            margin-right: 15px;
+            text-shadow: 4px 4px 3px rgb(255, 255, 255);
+        }
+    }
+}
