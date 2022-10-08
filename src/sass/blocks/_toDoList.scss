@@ -64,7 +64,13 @@
     &__buttons {
         position: absolute;
         bottom: 5px;
-        left: 38px;
+        left: 0;
+        width: 100%;
+        &-block {
+            display: flex;
+            justify-content:space-evenly;
+        }
+        
     }
     &__tips {
         display: none;

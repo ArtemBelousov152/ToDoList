@@ -12,8 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     toDoList();
 
-    const greetings = document.querySelector('.greetings');
-    setInterval(() => greetings.style.opacity = '0',1500);
-    setInterval(() => greetings.style.display = 'none',2000);
+    if (document.documentElement.clientWidth > 576) {
+        const greetings = document.querySelector('.greetings');
+        setInterval(() => greetings.style.opacity = '0',1500);
+        setInterval(() => greetings.style.display = 'none',2000);
+    }
+    
 
 });

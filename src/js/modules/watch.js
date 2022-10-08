@@ -56,6 +56,15 @@ function watch({hoursSelector, minuteSelector, secondSelector, daySelector, mont
 
     updateDate();
     const clock = setInterval(updateClock, 1000);
+    stopTime();
+
+    function stopTime() {
+        if (document.documentElement.clientWidth <= 576) {
+            clearInterval(clock);
+        }
+    }
+
+    window.addEventListener('resize', stopTime)
     
 }
 
