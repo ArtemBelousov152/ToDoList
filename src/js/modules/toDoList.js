@@ -1,21 +1,24 @@
 function toDoList() {
     const todoList = document.querySelector(".todolist__list"),
           pencil = document.querySelector('[data-openAdd]'),
-          addText = document.querySelector('.todolist__add'),
+          addText = document.querySelector('.todolist__add-wrapper'),
           btnSave = document.querySelector('[data-save]'),
           btnClear = document.querySelector('[data-clear]'),
           btnTips = document.querySelector('[data-tips]'),
-          tips = document.querySelector('.todolist__tips');
+          tips = document.querySelector('.todolist__tips'),
+          enter = document.querySelector('.todolist__enter');
     
     function addToDo(e) {
-        if(e.code === 'Enter') {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `
-            <span data-close class="icon-trash-can-solid"></span>${e.target.value}
-            `;
-            todoList.append(listItem);
-            e.target.value = '';
-        }
+        e.preventDefault();
+
+        const formData = Object.fromEntries(new FormData(e.target).entries());
+
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+        <span data-close class="icon-trash-can-solid"></span>${formData.text}
+        `;
+        todoList.append(listItem);
+        addText.reset();
     }
     
     function checked(elem) {
@@ -50,7 +53,7 @@ function toDoList() {
         console.dir(target);
     });
 
-    addText.addEventListener('keydown', addToDo);
+    addText.addEventListener('submit', addToDo);
     btnSave.addEventListener('click', saveTodo);
     pencil.addEventListener('click', () => {
         addText.classList.toggle('hide');
